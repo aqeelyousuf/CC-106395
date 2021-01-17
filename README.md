@@ -5,7 +5,7 @@
 StdID | Name
 ------------ | -------------
 *63448* | *Aqeel* <!--this is the group leader in bold-->
-61658 | Hafiz Faiq Alim
+63127 | Syed Shahroz 
 <!-- Replace name and student ids with acutally group member names and ids-->
 
 ## Description ##
