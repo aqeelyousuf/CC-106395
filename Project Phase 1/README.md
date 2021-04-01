@@ -60,7 +60,7 @@ int a = 40; // error
 
 ```
 
-## Example Constructs (If/While/loop/Datatypes) ##
+## Example Constructs ##
 ```c
 println("Hello world!");
 
@@ -171,7 +171,7 @@ while = 'while' parExpression statement
 assignmentOp = '='
 
 
-### Types ###
+### Types, Literals, Semi, ID, Digit, Letter,Char, WhiteSpace Characters ###
 
 statement = block
  | SEMI
@@ -180,8 +180,6 @@ statement = block
  | 'bool'
  | 'string'
 
-
-### Literals ###
 
 literal = IntegerLiteral
  | FloatingPointLiteral
@@ -194,34 +192,24 @@ StringLiteral = '"' (CHAR | '\"')* '"'
 BooleanLiteral = 'true' | 'false'
 
 
-### Semi ###
 
 SEMI = ';'
 
 
-### ID ###
 
 ID = (LETTER | '_') (LETTER | DIGIT | '_')*
 
 
-### Digit ###
-
 DIGIT = '0' | ... | '9'
 
-
-### Letter
 
 LETTER = 'a' | ... | 'z' | 'A' | ... | 'Z'
 
 
 
-### Char ###
-
 CHAR = <unicode character, as in Java>
 
 
-
-### WhiteSpace Characters ###
 
 Whitespace characters (' ', '\t', '\r', '\n') are skipped outside of tokens.
 
