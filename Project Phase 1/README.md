@@ -11,8 +11,57 @@ StdID | Name
 ## Language Selected ##
 **Mini-C**
 
-## Example Constructs (If/While/loop/Datatypes) ##
+## Mini-C language specification ##
+
+Mini-C is a very simple C-like programming language designed for education purposes (for software that
+can be used by students to learn about program compilation).
+
+It has if statements, loops (while), variables, arithmetic (+, -, *, /, %), comparison (==, !=, <, >, <=, >=),
+logical (!, &&, ||) operators, string concatenation.
+
+It does not have “main” function for entry point like in C or Java, all code on “top-level” (similarly to
+Python, JavaScript) is executed as if it was inside of C/Java main.
+
+Currently it does not support user-defined functions.
+
+## Data types ##
+1) int (signed 32-bit)
+2) double (double-precision 64-bit IEEE 754 floating point)
+3) bool
+4) string
+int, bool and double work the same as in Java.
+
+## Scope ##
+Nested scopes are supported for variables and work the same as in most of other languages like C, Java.
+Blocks (curly braces, { … }) can be nested and variables defined in a scope are available only until the end
+of the scope. Redeclaration of variables existing in parent (or current) scopes is not allowed.
+
+### Example : ###
+```c
+
+int a = 42;
+
+if (a == 42) {
+  int b = a + 1;
+  print(toString(b)); // 43
+}
+
+{
+  int b = a + 2;
+  print(toString(b)); // 44
+}
+
+{
+  int a = 41; // error
+  print(toString(b + 1)); // error
+}
+
+int a = 40; // error
+
 ```
+
+## Example Constructs (If/While/loop/Datatypes) ##
+```c
 println("Hello world!");
 
 print("please Enter Your name: ");
@@ -75,7 +124,7 @@ while (count < desiredCount) {
 
 ## Lexical Specification
 ### Statement
-```
+
 program = statement*
 
 statement = block
@@ -92,9 +141,8 @@ statement = block
 
 block = '{' statement* '}'
 
-```
-### Expressions
-```
+### Expressions ###
+
 expression = literal
  | ID
  | ('!' | '-') expression
@@ -122,9 +170,9 @@ while = 'while' parExpression statement
  
 assignmentOp = '='
 
-```
-### Types
-```
+
+### Types ###
+
 statement = block
  | SEMI
  | assigtype = 'int'
@@ -132,9 +180,9 @@ statement = block
  | 'bool'
  | 'string'
 
-```
-### Literals
-```
+
+### Literals ###
+
 literal = IntegerLiteral
  | FloatingPointLiteral
  | StringLiteral
@@ -145,42 +193,42 @@ FloatingPointLiteral = DIGIT+ '.' DIGIT+
 StringLiteral = '"' (CHAR | '\"')* '"'
 BooleanLiteral = 'true' | 'false'
 
-```
-### Semi
-```
+
+### Semi ###
+
 SEMI = ';'
 
-```
-### ID
-```
+
+### ID ###
+
 ID = (LETTER | '_') (LETTER | DIGIT | '_')*
 
-```
-### Digit
-```
+
+### Digit ###
+
 DIGIT = '0' | ... | '9'
 
-```
 
 ### Letter
-```
+
 LETTER = 'a' | ... | 'z' | 'A' | ... | 'Z'
 
-```
 
-### Char
-```
+
+### Char ###
+
 CHAR = <unicode character, as in Java>
 
-```
 
-### WhiteSpace Characters
-```
+
+### WhiteSpace Characters ###
+
 Whitespace characters (' ', '\t', '\r', '\n') are skipped outside of tokens.
 
-```
 
-## Language Context Free Grammar (CFG) 
+
+## Language Context Free Grammar (CFG)  ###
+
 The Grammar description using EBNF.
 
 •        'x' — terminal symbol.
