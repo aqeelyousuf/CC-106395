@@ -1,4 +1,4 @@
-## CC Spring 2021: Project Phase 1
+## CC Spring 2021: Project Phase 2
 
 ## PROJECT MEMBERS
 
