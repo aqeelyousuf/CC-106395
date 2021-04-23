@@ -1,9 +1,14 @@
- **Mini C#**
- **106395**
+## Language Selected ##
+**Mini-C**
 
-Project Members
-63127 | Syed Shahroz Hasan
-63448 | Aqeel Yousuf
+## Project Members
+
+| ID             | Name            |
+|:--------------:|:---------------:|
+|  **63448**     |  **Aqeel**      |
+|  63127         |  Shahroz Hasan  |
+## Mini-C language specification ##
+
 
 # Project Description
 This project is on Mini C#.In this we have made Parser using React and lexical Analyser using Flex
