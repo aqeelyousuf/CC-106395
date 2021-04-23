@@ -1,14 +1,14 @@
-Mini C#
-106395
+ **Mini C#**
+ **106395**
 
 Project Members
 63127 | Syed Shahroz Hasan
 63448 | Aqeel Yousuf
 
-Project Description
+# Project Description
 This project is on Mini C#.In this we have made Parser using React and lexical Analyser using Flex
 
-Language Description
+# Language Description
 Mini-C is a very simple C-like programming language designed for education purposes (for software that can be used by students to learn about program compilation).
 
 It has if statements, loops (while), variables, arithmetic (+, -, *, /, %), comparison (==, !=, <, >, <=, >=), logical (!, &&, ||) operators, string concatenation.
@@ -17,7 +17,8 @@ It does not have “main” function for entry point like in C or Java, all code
 
 Currently it does not support user-defined functions
 
-Example Code:
+# Example Code:
+```
 println("Hello world!");
 
 print("please Enter Your name: ");
@@ -76,7 +77,8 @@ while (count < desiredCount) {
  num = num + 1;
 }
 
-Lexical Specification:
+```
+# Lexical Specification:
 Statement
 program = statement*
 
